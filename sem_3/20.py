@@ -8,14 +8,34 @@
 # Ж, З, Х, Ц, Ч – 5 очков; Ш, Э, Ю – 8 очков; Ф, Щ, Ъ – 10 очков.s
 # Напишите программу, которая вычисляет стоимость введенного пользователем слова.
 
-my_scrabble = {'AEIOULNSTR' : 1,  'DG' : 2, 'BCMP' : 3, 'FHVWY' : 4, 'K' : 5,
-'JX' : 8, 'QZ' :10, 'АВЕИНОРСТ' : 1, 'ДКЛМПУ' : 2, 'БГЁьЯ' : 3, 'ЙЫ' : 4, 'ЖЗХЦЧ' : 5,
-'ШЭЮ' : 8, 'ФЩЪ' : 10}
+# my_scrabble = {'AEIOULNSTR' : 1,  'DG' : 2, 'BCMP' : 3, 'FHVWY' : 4, 'K' : 5,
+# 'JX' : 8, 'QZ' :10, 'АВЕИНОРСТ' : 1, 'ДКЛМПУ' : 2, 'БГЁьЯ' : 3, 'ЙЫ' : 4, 'ЖЗХЦЧ' : 5,
+# 'ШЭЮ' : 8, 'ФЩЪ' : 10}
 
-word = input('Enter a word in Russian or in English: ').upper()
-word_value = 0
-for letter in word:
-    for key in my_scrabble.keys():
-        if letter in key:
-            word_value += my_scrabble[key]
-print(word_value)
+# word = input('Enter a word in Russian or in English: ').upper()
+# word_value = 0
+# for letter in word:
+#     for key in my_scrabble.keys():
+#         if letter in key:
+#             word_value += my_scrabble[key]
+# print(word_value)
+
+
+
+
+# Хакер Василий получил доступ к классному журналу и
+# хочет заменить все свои минимальные оценки на
+# максимальные. Напишите программу, которая
+# заменяет оценки Василия, но наоборот: все
+# максимальные – на минимальные.
+# Input: 5 -> 1 3 3 3 4
+# Output: 1 3 3 3 1
+
+# grades = [1, 3, 4, 2, 5, 5, 4, 2, 3]
+# worst = min(grades)
+# best = max(grades)
+# for i in range(len(grades)):
+#          if grades[i] == best:
+#              grades[i] = worst
+# print(grades)       
+
