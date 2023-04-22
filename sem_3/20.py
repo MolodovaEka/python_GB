@@ -31,11 +31,11 @@
 # Input: 5 -> 1 3 3 3 4
 # Output: 1 3 3 3 1
 
-# grades = [1, 3, 4, 2, 5, 5, 4, 2, 3]
-# worst = min(grades)
-# best = max(grades)
-# for i in range(len(grades)):
-#          if grades[i] == best:
-#              grades[i] = worst
-# print(grades)       
+grades = [1, 3, 4, 2, 5, 5, 4, 2, 3]
+worst = min(grades)
+best = max(grades)
+for i in range(len(grades)):
+    if grades[i] == best:
+        grades[i] = worst
+print(grades)       
 

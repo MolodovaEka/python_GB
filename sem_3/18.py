@@ -5,12 +5,16 @@
 
 from random import randint
 n = int(input('Enter a number to set the length of your array '))
-array = [randint(0, 100) for element in range(n)]
+array = [randint(1, 100) for element in range(n)]
 print(array)
 x = int(input('Enter the number X '))
-for i in array:
-    y = x - 1
-    if x - i < y:
-        y = x - i
-print('The closest to X number in your array is', i, '.')
+a = abs(array[0] - x)
+the_closest = 0
+for i in range(1, len(array)):
+    if abs(array[i] - x) <= a:
+        a = abs(array[i] - x)
+        the_closest = array[i]
+print(f'The number that is the closest to X in your array is {the_closest}')
+
+
 
