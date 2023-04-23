@@ -4,4 +4,8 @@
 # Также нельзя использовать циклы.
 
 def a_plus_b(arg1, arg2):
-    
+    return 1 + a_plus_b(arg1, arg2 - 1)
+
+a = int(input('Enter number A: '))
+b = int(input('Enter number B: '))
+print(a_plus_b(a, b))

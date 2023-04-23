@@ -2,7 +2,9 @@
 # и возводит число А в целую степень B с помощью рекурсии.
 
 def raise_to_power(arg1, arg2):
-    if arg2 == 1:
+    if arg2 == 0:
+        return(1)
+    elif arg2 == 1:
         return(arg1)
     else:
         return (arg1*raise_to_power(arg1, arg2 - 1)) 
