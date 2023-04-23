@@ -12,20 +12,33 @@
 # которое может собрать за один заход собирающий модуль,
 # находясь перед некоторым кустом заданной во входном файле грядки.
 
-from random import randint
-n = int(input('Enter a number of bushes on your blackberry patch: '))
-blackberry_patch = [randint(25, 40) for element in range(n)]
-print(blackberry_patch)
-harvest = []
-i = 0
-while i < n:
-    harvest.append(blackberry_patch[-1] + blackberry_patch[-2] + blackberry_patch[-3])
-    blackberry_patch.insert(0, blackberry_patch[-1])
-    blackberry_patch.pop()
-    i+=1
-print(harvest)
-max_harvest = max(harvest)
-print(f'The biggest number of berries per time is {max_harvest}')
+# from random import randint
+# n = int(input('Enter a number of bushes on your blackberry patch: '))
+# blackberry_patch = [randint(25, 40) for element in range(n)]
+# print(blackberry_patch)
+# harvest = []
+# i = 0
+# while i < n:
+#     harvest.append(blackberry_patch[-1] + blackberry_patch[-2] + blackberry_patch[-3])
+#     blackberry_patch.insert(0, blackberry_patch[-1])
+#     blackberry_patch.pop()
+#     i+=1
+# print(harvest)
+# max_harvest = max(harvest)
+# print(f'The biggest number of berries per time is {max_harvest}')
+
+n = int(input())
+arr = list()
+for i in range(n):
+    x = int(input())
+    arr.append(x)
+print(arr)
+arr_count = list()
+for i in range(len(arr) - 1):
+    arr_count.append(arr[i - 1] + arr[i] + arr[i + 1])
+arr_count.append(arr[i - 2] + arr[i - 1] + arr[0])
+print(arr_count)
+print(max(arr_count))
 
 
 
