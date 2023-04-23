@@ -4,7 +4,12 @@
 # Также нельзя использовать циклы.
 
 def a_plus_b(arg1, arg2):
-    return 1 + a_plus_b(arg1, arg2 - 1)
+    if arg2 == 0:
+        return arg1
+    elif arg2 > 0:
+        return a_plus_b(arg1 + 1, arg2 - 1)
+    else:
+        return a_plus_b(arg1 - 1, arg2 + 1)
 
 a = int(input('Enter number A: '))
 b = int(input('Enter number B: '))
