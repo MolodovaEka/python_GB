@@ -15,6 +15,11 @@ def get_progression(arg1, arg2, arg3):
 
 print(get_progression(a, b, c))
 
+# a1 = int(input())
+# d = int(input())
+# n = int(input())
+# for i in range(n):
+# print(a1 + i * d)
 
 
 
