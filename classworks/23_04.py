@@ -133,21 +133,79 @@
 # Вывести N чисел Фибоначи в соответствии с условием вывода:
 # в строку через пробел: 1 1 2 3 5 8 итд.
 
-n = int(input())
-f1 = 1
-f2 = 1
-if n > 1:
-    print(f1, f2, end=' ')
-    for i in range(2, n):
-        f1, f2 = f2, f1+f2
-        print(f2, end=' ')
+# n = int(input())
+# f1 = 1
+# f2 = 1
+# if n > 1:
+#     print(f1, f2, end=' ')
+#     for i in range(2, n):
+#         f1, f2 = f2, f1+f2
+#         print(f2, end=' ')
        
 
-   
+#  "Ведьмаку заплатите чеканной монетой
+#  (минимальным кол-вом монет достоинством 1, 5, 10 или 25)"  
+
+# price = int(input("цена вопроса: "))
+# coins_needed = 0
+# while price >= 25:
+#     coins_needed += 1
+#     price -= 25
+# while price >= 10:
+#     coins_needed += 1
+#     price -= 10
+# while price >= 5:
+#     coins_needed += 1
+#     price -= 5
+# while price >= 1:
+#     coins_needed = coins_needed + 1
+#     price -= 1
+# print(coins_needed)
 
 
 
+# На вход подается число, выведите:
+# сумму его цифр;
+# количество цифр в нем;
+# произведение его цифр;
+# среднее арифметическое его цифр;
+# его первую цифру;
+# сумму его первой и последней цифры.
 
+# num = int(input('Enter a number: '))
+# how_many = 1
+# sum_of_dgts = 0
+# last_one = num % 10
+# product = 1
+# while num > 10:
+#     how_many += 1
+#     sum_of_dgts += (num % 10)
+#     product = product * (num % 10)
+#     num = num // 10
+# first_one = num % 10
+# print(sum_of_dgts + first_one)
+# print(how_many)
+# print(product * first_one)
+# print(float((sum_of_dgts + first_one) / how_many))
+# print(first_one)
+# print(first_one + last_one)
+
+glasnye = ["а", "о", "у", "ы", "э", "е", "ё", "и", "ю", "я"]
+
+def same_by(charsacteristic, objects):
+    objects = set(map(charsacteristic, objects))
+    return len(objects) == 1
+
+def how_many_slogov(fraze):
+    glasnye_of_fraze = [i for i in fraze if i in glasnye]
+    return len(glasnye_of_fraze)
+
+
+stih = 'пара-ра-рам рам-папам па-ра-па-да'
+if same_by(how_many_slogov, stih.split()):
+    print("Парам пам-пам")
+else:
+    print("Пам парам") 
 
 
 
