@@ -190,6 +190,7 @@
 # print(first_one)
 # print(first_one + last_one)
 
+
 # glasnye = ["а", "о", "у", "ы", "э", "е", "ё", "и", "ю", "я"]
 
 # def same_by(charsacteristic, objects):
@@ -392,10 +393,55 @@
 # Имеется 100 рублей. Сколько быков, коров и телят можно купить на все эти деньги,
 # если плата за быка – 10 рублей, за корову – 5 рублей, за теленка – 0.5 рубля
 # и надо купить 100 голов скота?
-total = 0
-for b in range(1, 10):
-    for k in range(1, 20):
-        for t in range(1, 200):
-            if b * 10 + k * 5 + t * 0.5 == 100 and b + k + t == 100:
-                print('b =', b, 'k =', k, 't =', t)
-print(b, k, t, sep=',')
+
+# for b in range(1, 10):
+#     for k in range(1, 20):
+#         for t in range(1, 200):
+#             if b * 10 + k * 5 + t * 0.5 == 100 and b + k + t == 100:
+#                 print('b =', b, 'k =', k, 't =', t)
+
+# Дано натуральное число n. Напишите программу, которая печатает численный треугольник
+# с высотой равной n, в соответствии с примером.
+# n = int(input())
+# counter = 1
+# for i in range(1, n+1):
+#     for j in range(1, i+1):
+#         print(counter, end=' ')
+#         counter +=1
+#     print()
+
+
+# n = int(input())
+# counter = 1
+# for i in range(1, n + 1):
+#     for _ in range(1, i):
+#         print(counter, end='')
+#         counter += 1
+#     for _ in range(counter - 1, -1, -1):
+#         print(counter, end='')
+#         counter -= 1
+#     counter = 1
+#     print()
+
+
+# На вход программе подается два натуральных числа a и b (a< b).
+# Напишите программу, которая находит натуральное число из отрезка [a;b]
+# с максимальной суммой делителей.
+
+a = int(input())
+b = int(input())
+total_divs = 0
+max_divs = 0
+the_number = 0
+
+for i in range(a, b + 1):
+    for j in range(1, b + 1):
+        if i % j == 0:
+            total_divs += j
+    if total_divs >= max_divs:
+        if i > the_number:
+            max_divs = total_divs
+            the_number = i
+    total_divs = 0
+print(the_number, max_divs, sep=' ')
+
