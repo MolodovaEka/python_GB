@@ -190,27 +190,212 @@
 # print(first_one)
 # print(first_one + last_one)
 
-glasnye = ["а", "о", "у", "ы", "э", "е", "ё", "и", "ю", "я"]
+# glasnye = ["а", "о", "у", "ы", "э", "е", "ё", "и", "ю", "я"]
 
-def same_by(charsacteristic, objects):
-    objects = set(map(charsacteristic, objects))
-    return len(objects) == 1
+# def same_by(charsacteristic, objects):
+#     objects = set(map(charsacteristic, objects))
+#     return len(objects) == 1
 
-def how_many_slogov(fraze):
-    glasnye_of_fraze = [i for i in fraze if i in glasnye]
-    return len(glasnye_of_fraze)
-
-
-stih = 'пара-ра-рам рам-папам па-ра-па-да'
-if same_by(how_many_slogov, stih.split()):
-    print("Парам пам-пам")
-else:
-    print("Пам парам") 
+# def how_many_slogov(fraze):
+#     glasnye_of_fraze = [i for i in fraze if i in glasnye]
+#     return len(glasnye_of_fraze)
 
 
+# stih = 'пара-ра-рам рам-папам па-ра-па-да'
+# if same_by(how_many_slogov, stih.split()):
+#     print("Парам пам-пам")
+# else:
+#     print("Пам парам") 
+
+# Если число состоит из одинаковых цифр, выведите YES, иначе выведите NO:
+# num = int(input())
+# last_f = num % 10
+# flag = True
+# while num > 0:
+#     if num % 10 != last_f:
+#         flag = False
+#         break
+#     else:
+#         num = num // 10
+
+# if flag == True:
+#     print('Yes') 
+# else:
+#     print('No')
+
+# Проверьте, является ли число справа налево упорядоченным по неубыванию
+
+# num = int(input())
+# flag = True
+# while num > 10:
+#     if num % 10 > (num // 10) % 10:
+#         flag = False
+#         break
+#     else:
+#         num = num // 10
+
+# if flag == True:
+#     print('YES')
+# else:
+#     print('NO')
+
+# for i in range(10):
+#     print(i, end='*')
+#     if i > 6:
+#         break
+
+# i = 100
+# while i > 0:
+#     if i == 40:
+#         break
+#     print(i, end='*')
+#     i -= 20
+
+# n = 10
+# while n > 0:
+#     n -= 1
+#     if n == 2:
+#         continue
+#     print(n, end='*')
+
+# result = 0
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     result += i
+# print(result)
+
+# mult = 1
+# for i in range(1, 11):
+#    if i % 2 == 0:
+#       continue
+#    if i % 9 == 0:
+#       break
+#    mult *= i
+# print(mult)
+
+# count = 0
+# product = 1
+# for i in range(10):
+#     x = int(input())
+#     if x > 0:
+#         product *= x
+#         count += 1
+# if count > 0:
+#     print(count)
+#     print(product)
+# else:
+#     print('NO')   
+
+# maxi = -10**6
+# total = 0
+# for _ in range(10):
+#     x = int(input())
+#     if x < 0:
+#         total += x
+#         if x > maxi:
+#             maxi = x
+# if total == 0:
+#     print('NO')  
+# else:
+#     print(total)
+#     print(maxi)   
 
 
-        
+# На обработку поступает натуральное число. Нужно написать программу,
+# которая выводит на экран максимальную цифру числа, кратную 
+# 3. Если в числе нет цифр, кратных  3, требуется на экран вывести «NO».
+
+# n = int(input())
+# max_digit = n % 10
+# while n > 0:
+#     digit = n % 10
+#     if digit == 0 or digit > max_digit:
+#         if digit % 3 == 0:
+#             max_digit = digit
+#     n = n // 10
+# if max_digit >= 0 and max_digit % 3 == 0:
+#     print(max_digit)
+# else:
+#     print('NO')
+
+# n = int(input())
+# while n > 10:
+#     n //= 10
+# print(n)
+
+# n = int(input())
+# product = n % 10
+# while n >= 10:
+#     n //= 10
+#     digit = n % 10
+#     product = product * digit
+# print(product) 
+
+# for i in range(1, 4):
+#     for j in range(3, 5):
+#         print(i + j, end='')
+
+# counter = 0
+# for i in range(99, 102):
+#     temp = i
+#     while temp > 0:
+#         counter += 1
+#         temp //= 10
+# print(counter)
+
+# n = int(input())
+# for i in range(n):
+#     for j in range(3):
+#         print(n, end=' ')
+#     print() 
+
+# n = int(input())
+# for i in range(1, n + 1):
+#     for j in range(5):
+#         print(i, end=' ')
+#     print()   
+
+# n = int(input())
+# for i in range(1, n + 1):
+#     for j in range(1, 10):
+#         print(i, '+', j, '=', i + j)
+#     print() 
+
+# n = int(input())
+# for i in range(1, n // 2 + 2):
+#     print('*' * i)
+# for j in range(n // 2 + 1, n + 1):
+#     print('*' * (n - j))
 
 
+# n = int(input())
+# for i in range(1, n + 1):
+#     for j in range(i):
+#         print(i, end='')
+#     print()
 
+# Решите уравнение в натуральных числах 28n + 30k + 31m = 365.
+# Примечание. Используйте вложенный цикл for. В первую очередь запишите
+# решение с наименьшим значением n.
+
+# total = 0
+# for n in range(1, 13):
+#     for k in range(1, 12):
+#         for m in range(1, 11):
+#             if n * 28 + k * 30 + m * 31 == 365:
+#                 total += 1
+#                 print('n =', n, 'k =', k, 'm =', m)
+# print('Общее количество натуральных решений =', total)
+
+
+# Имеется 100 рублей. Сколько быков, коров и телят можно купить на все эти деньги,
+# если плата за быка – 10 рублей, за корову – 5 рублей, за теленка – 0.5 рубля
+# и надо купить 100 голов скота?
+total = 0
+for b in range(1, 10):
+    for k in range(1, 20):
+        for t in range(1, 200):
+            if b * 10 + k * 5 + t * 0.5 == 100 and b + k + t == 100:
+                print('b =', b, 'k =', k, 't =', t)
+print(b, k, t, sep=',')
