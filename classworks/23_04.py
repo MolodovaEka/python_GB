@@ -428,20 +428,24 @@
 # Напишите программу, которая находит натуральное число из отрезка [a;b]
 # с максимальной суммой делителей.
 
-a = int(input())
-b = int(input())
-total_divs = 0
-max_divs = 0
-the_number = 0
+# a = int(input())
+# b = int(input())
+# total_divs = 0
+# max_divs = 0
+# the_number = 0
 
-for i in range(a, b + 1):
-    for j in range(1, b + 1):
-        if i % j == 0:
-            total_divs += j
-    if total_divs >= max_divs:
-        if i > the_number:
-            max_divs = total_divs
-            the_number = i
-    total_divs = 0
-print(the_number, max_divs, sep=' ')
+# for i in range(a, b + 1):
+#     for j in range(1, b + 1):
+#         if i % j == 0:
+#             total_divs += j
+#     if total_divs >= max_divs:
+#         if i > the_number:
+#             max_divs = total_divs
+#             the_number = i
+#     total_divs = 0
+# print(the_number, max_divs, sep=' ')
 
+# На вход программе подается натуральное число n. Напишите программу,
+# выводящую графическое изображение делимости чисел от 1 до n включительно.
+# В каждой строке надо напечатать очередное число и столько символов «+»,
+# сколько делителей у этого числа.
