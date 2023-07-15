@@ -84,7 +84,7 @@
 #     low = 0
 #     high = len(list) - 1
 #     while low <= high:
-#         mid = (low + high) // 2
+#         mid = (low + high)//2
 #         guess = list[mid]
 #         if item == guess:
 #             return mid
@@ -95,7 +95,7 @@
 #     return None
 
 # my_list = [12, 23, 34, 45, 56, 67, 78, 89, 90]
-# print(binary_search(my_list, 12))
+# binary_search(my_list, 12)
 
 # Хакер Василий получил доступ к классному журналу и
 # хочет заменить все свои минимальные оценки на
@@ -511,3 +511,255 @@
 #     if flag == True:
 #         print(i)
 #     flag = True
+
+# n = int(input())
+# print(19*'*')
+# for _ in range(n-2):
+#     print('*', 17*' ', '*', sep='')
+# print(19*'*')
+
+# n = int(input())
+# while n > 999:
+#     n //= 10
+# third = n % 10
+# print(third)
+
+# n = int(input())
+# count3 = 0
+# last = n % 10
+# count_last = 0
+# count_even = 0
+# total_big = 0
+# product_biggest = 1
+# count5_0 = 0
+# while n > 0:
+#     last_d = n % 10
+#     if last_d == last:
+#         count_last += 1
+#     if last_d == 3:
+#         count3 += 1
+#     if last_d % 2 == 0:
+#         count_even += 1
+#     if last_d > 5:
+#         total_big += last_d
+#     if last_d > 7:
+#         product_biggest *= last_d
+#     if last_d == 0 or last_d == 5:
+#         count5_0 += 1
+#     n = n // 10
+# print(count3)
+# print(count_last)
+# print(count_even)
+# print(total_big)
+# print(product_biggest)
+# print(count5_0) 
+
+# сумма двух кубов двумя разными способами
+
+#  for i in range (1, 33):
+#      for j in range(2, 32):
+#          for k in range(3, 31):
+#              for q in range(4, 30):
+#                      if i ** 3 + j ** 3 == k ** 3 + q ** 3 and i != j and j != k and k != q:
+#     print(i ** 3 + j ** 3 == k ** 3 + q ** 3)
+# s = input()
+# for c in s:
+#     if c in "0123456789":
+#         print('Цифра')
+#         break
+# else:
+#     print('Цифр нет')
+
+
+# s = input()
+# count_vowels = 0
+# count_consonants = 0
+# for c in s:
+#     if c in 'ауоыиэяюёе':
+#         count_vowels += 1
+#     elif c in 'бвгджзйклмнпрстфхцчшщ':
+#         count_consonants += 1
+# print(f'Количество гласных букв равно {count_vowels}')
+# print(f'Количество согласных букв равно {count_consonants}') 
+
+# Десятичное число в двоичное:
+
+# n = int(input())
+# s = ''
+# while n > 0:
+#     a = n % 2
+#     s = str(a) + s
+#     n //= 2
+# print(s)
+
+# s = 'abcdefg'
+# print(s[::-3])
+
+# s = "In 2010, someone paid 10k Bitcoin for two pizzas."
+# s1 = s[:13]
+# print(s1)
+
+# s = "In 2010, someone paid 10k Bitcoin for two pizzas."
+# s1 = s[-9:]
+# print(s1)
+
+# s = "In 2010, someone paid 10k Bitcoin for two pizzas."
+# s1 = s[::-1]
+# print()
+# Палиндром или нет?
+# s = input()
+# m = len(s) // 2
+# s1 = s[:m]
+# s2 = s[-1:-m-1:-1]
+# if s1 == s2:
+#     print('YES')
+# else:
+#     print('NO')
+
+# s = input()
+# s1 = s[::-1]
+# if s1 == s:
+#     print('YES')
+# else:
+#     print('NO')
+
+# Вывести для поданой строки:
+# общее количество символов в строке;
+# исходную строку, повторенную 3 раза;
+# первый символ строки;
+# первые три символа строки;
+# последние три символа строки;
+# строку в обратном порядке;
+# строку с удаленным первым и последним символом.
+
+# s = input()
+# print(len(s))
+# print(s*3)
+# print(s[0])
+# print(s[0:3])
+# print(s[-3:])
+# print(s[::-1])
+# print(s[1:-1])
+
+# Вывести для поданой строки:
+# третий символ этой строки;
+# предпоследний символ этой строки;
+# первые пять символов этой строки;
+# всю строку, кроме последних двух символов;
+# все символы с четными индексами;
+# все символы с нечетными индексами;
+# все символы в обратном порядке;
+# все символы строки через один в обратном порядке, начиная с последнего.
+
+# s = input()
+# print(s[2])
+# print(s[-2])
+# print(s[:5])
+# print(s[:-2])
+# print(s[::2])
+# print(s[1::2])
+# print(s[::-1])
+# print(s[::-2])
+
+# На вход программе подается строка текста. Напишите программу,
+# которая разрежет ее на две равные части, переставит их местами
+# и выведет на экран.
+
+# s = input()
+# l = len(s)//2
+# s1 = s[-l:]
+# s2 = s1 + s
+# s3 = s2[:-l]
+# print(s3)
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# Дан список с затратами на рекламу. Но в данных есть ошибки,
+# некоторые затраты имеют отрицательную величину. Удалите
+# такие значения из списка и посчитайте суммарные затраты
+
+# def total_costs(list):
+#     positives = [i for i in list if i > 0]
+#     total = sum(positives)
+#     return(total)
+
+# costs = [-90,-89,-78,-56, 1, -90, 2, 3, 5]
+# print(total_costs(costs))
+
+
+# На складе лежат разные фрукты в разном количестве.
+# Нужно написать функцию, которая на вход принимает любое
+# количество названий фруктов и их количество, а возвращает
+# общее количество фруктов на складе
+
+# Получаем 2 списка (ради повторения пройденного):
+# fruits = ['бананы', 'яблоки', 'персики', 'груши', 'лимоны', 'авокадо', 'манго']
+# pieces = [12, 23, 27, 19, 21, 24, 14]
+
+# Создаем из двух списков словарь:
+# def create_dict(keys: list[str], values: list[int]):
+#     my_warehouse = {}
+#     for i in range(len(keys)):
+#         my_warehouse[keys[i]] = values[i]
+#     return my_warehouse
+
+# Проверка, что все получилось:
+# my_fruits = create_dict(fruits, pieces)
+# print(my_fruits)
+
+# # Добавляем еще два словаря:
+# add_1 = {'яблоки': 50, 'груши': 90, 'ананасы': 15}
+# add_2 = {'яблоки': 30, 'бананы': 30, 'манго': 30}
+
+# Пишем функцию, которая будет к содержимому склада добавлять фрукты:
+# from collections import Counter
+
+# def merge_dicts(*dictionaries):
+#     result = Counter()
+#     for dictionary in dictionaries:
+#         result.update(dictionary)
+#     return dict(result)
+
+# # Проверяем, всё ли добавилось:
+# warehouse = merge_dicts(my_fruits, add_1, add_2)
+# print(warehouse)
+
+# # Считаем общее количество фруктов:
+# total_fruits = sum(list(warehouse.values()))
+# print(total_fruits)
+
+# Домашнее задание 4: Даны два списка, "Дата покупки" и "Суммы покупок по датам".
+# 4.1 Найдите, какая выручка у компании в ноябре
+# 4.2 Найдите выручку компании в зависимости от месяца
+
+# dates = ['2021-09-14', '2021-12-15', '2021-09-08', '2021-12-05', '2021-10-09', '2021-09-30', '2021-12-22', '2021-11-29', '2021-12-24', '2021-11-26', '2021-10-27', '2021-12-18', '2021-11-09', '2021-11-23', '2021-09-27',
+# '2021-10-02', '2021-12-27', '2021-09-20', '2021-12-13', '2021-11-01', '2021-11-09', '2021-12-06', '2021-12-08', '2021-10-09', '2021-10-31', '2021-09-30', '2021-11-09', '2021-12-13', '2021-10-26', '2021-12-09']
+# amount = [1270, 8413, 9028, 3703, 5739, 4095, 295, 4944, 5723, 3701, 4471, 651, 7037, 4274, 6275, 4988, 6930, 2971, 6592, 2004, 2822, 519, 3406, 2732, 5015, 2008, 316, 6333, 5700, 2887]
+
+# def create_dict(keys: list[str], values: list[int]):
+#     my_amount = {}
+#     for i in range(len(keys)):
+#         my_amount[keys[i]] = values[i]
+#     return my_amount
+
+# amount_yearly = create_dict(dates, amount)
+# print(amount_yearly)
+
+# def monthly_amount(dict, str):
+#     monthly_d = {}
+#     for key in dict.keys():
+#         monthly_d = {key: value for (key, value) in dict.items() if str in key}
+#     return monthly_d
+
+# # Для проверки:
+# november_amount = monthly_amount(amount_yearly, '-11-')
+# print(november_amount)
+
+# # Выручка за месяц:
+# def monthly_total(dict):
+#     x = sum(list(dict.values()))
+#     return x
+
+# print(monthly_total(november_amount))
+
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
