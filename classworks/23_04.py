@@ -731,41 +731,41 @@
 # 4.1 Найдите, какая выручка у компании в ноябре
 # 4.2 Найдите выручку компании в зависимости от месяца
 
-dates = ['2021-09-14', '2021-12-15', '2021-09-08', '2021-12-05', '2021-10-09', '2021-09-30', '2021-12-22', '2021-11-29', '2021-12-24', '2021-11-26', '2021-10-27', '2021-12-18', '2021-11-09', '2021-11-23', '2021-09-27',
-'2021-10-02', '2021-12-27', '2021-09-20', '2021-12-13', '2021-11-01', '2021-11-09', '2021-12-06', '2021-12-08', '2021-10-09', '2021-10-31', '2021-09-30', '2021-11-09', '2021-12-13', '2021-10-26', '2021-12-09']
-amount = [1270, 8413, 9028, 3703, 5739, 4095, 295, 4944, 5723, 3701, 4471, 651, 7037, 4274, 6275, 4988, 6930, 2971, 6592, 2004, 2822, 519, 3406, 2732, 5015, 2008, 316, 6333, 5700, 2887]
+# dates = ['2021-09-14', '2021-12-15', '2021-09-08', '2021-12-05', '2021-10-09', '2021-09-30', '2021-12-22', '2021-11-29', '2021-12-24', '2021-11-26', '2021-10-27', '2021-12-18', '2021-11-09', '2021-11-23', '2021-09-27',
+# '2021-10-02', '2021-12-27', '2021-09-20', '2021-12-13', '2021-11-01', '2021-11-09', '2021-12-06', '2021-12-08', '2021-10-09', '2021-10-31', '2021-09-30', '2021-11-09', '2021-12-13', '2021-10-26', '2021-12-09']
+# amount = [1270, 8413, 9028, 3703, 5739, 4095, 295, 4944, 5723, 3701, 4471, 651, 7037, 4274, 6275, 4988, 6930, 2971, 6592, 2004, 2822, 519, 3406, 2732, 5015, 2008, 316, 6333, 5700, 2887]
 
-def create_dict(keys: list[str], values: list[int]):
-    my_amount = {}
-    for i in range(len(keys)):
-        if keys[i] not in my_amount:
-            my_amount[keys[i]] = values[i]
-        else:
-            my_amount[keys[i]] += values[i]
-    return my_amount
+# def create_dict(keys: list[str], values: list[int]):
+#     my_amount = {}
+#     for i in range(len(keys)):
+#         if keys[i] not in my_amount:
+#             my_amount[keys[i]] = values[i]
+#         else:
+#             my_amount[keys[i]] += values[i]
+#     return my_amount
 
-amount_yearly = create_dict(dates, amount)
-print(amount_yearly)
+# amount_yearly = create_dict(dates, amount)
+# print(amount_yearly)
 
-def november_sum(d: list, a: list):
-    res = 0
-    for i in range(len(d)):
-        if '-11-' in d[i]:
-            res += a[i]
-    return res
+# def november_sum(d: list, a: list):
+#     res = 0
+#     for i in range(len(d)):
+#         if '-11-' in d[i]:
+#             res += a[i]
+#     return res
 
-def month_amount(d: list[str], a: list[int]):
-    my_amount = {}
-    for i in range(len(d)):
-        month = d[i][5:7]
-        if month not in my_amount:
-            my_amount[month] = a[i]
-        else:
-            my_amount[month] += a[i]
-    return my_amount  
+# def month_amount(d: list[str], a: list[int]):
+#     my_amount = {}
+#     for i in range(len(d)):
+#         month = d[i][5:7]
+#         if month not in my_amount:
+#             my_amount[month] = a[i]
+#         else:
+#             my_amount[month] += a[i]
+#     return my_amount  
 
-print('Выручка в ноябре равна', november_sum(dates, amount)) 
-print('Выручка по месяцам равна', month_amount(dates, amount))
+# print('Выручка в ноябре равна', november_sum(dates, amount)) 
+# print('Выручка по месяцам равна', month_amount(dates, amount))
 
 # def monthly_amount(d: dict(), month: str):
 #     monthly_d = {}
@@ -784,3 +784,57 @@ print('Выручка по месяцам равна', month_amount(dates, amoun
 
 # print(monthly_total(november_amount))
 
+
+
+# s = input()
+# f = s.count('f')
+# if f == 1:
+#     print(s.find('f'))
+# elif f > 1:
+#     print(s.find('f'), s.rfind('f'), sep=' ')
+# elif f == 0:
+#     print('NO')
+
+# s = input()
+# s1 = s.find('h')
+# s2 = s.rfind('h')
+# s3 = s[: s1]
+# s4 = s[s2 :]
+# print((s3 + s4).replace('h', ''))
+
+
+# s = 'In {0}, someone paid {1} {2} for two pizzas.'
+# year = '2010'
+# price = '10k'
+# currency = 'Bitcoin'
+# txt = 'In {0}, someone paid {1} {2} for two pizzas.'.format(year, price, currency)
+# print(txt)
+
+# s = input()
+# for i in range(len(s)):
+#     if i % 3 != 0:
+#         print(s[i], end='')
+
+# s = input()
+# for i in range(len(s)):
+#     if i % 3 == 0:
+#         s = s.replace(s[i], '!')
+# s = s.replace('!', '')
+# print(s)
+
+# s = input()
+# n = s.count('f')
+# if n == 0:
+#     print('-2')
+# elif n == 1:
+#     print('-1')
+# else:
+#     f = s.find('f')
+#     x = s.find('f', f+1, len(s))
+#     print(x)
+
+# s = input()
+# x = s.find('h')
+# y = s.rfind('h')
+# s_1 = s[x: y+1]
+# print(s[:x] + s_1[::-1] + s[y+1:])
