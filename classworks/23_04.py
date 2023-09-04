@@ -838,3 +838,222 @@
 # y = s.rfind('h')
 # s_1 = s[x: y+1]
 # print(s[:x] + s_1[::-1] + s[y+1:])
+
+# eng_alph = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# n = int(input())
+# eng_n = eng_alph[: n]
+# print(eng_n)
+
+# primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+# print(primes[len(primes) - 1])
+
+# primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+# print(primes[:6])
+
+# rainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+# rainbow[3] = 'Зеленый'
+# rainbow[6] = 'Фиолетовый'
+# print(rainbow)
+
+# languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+# languages_rev = languages[::-1]
+# print(languages_rev)
+
+# numbers1 = [1, 2, 3]
+# numbers2 = [6]
+# numbers3 = [7, 8, 9, 10, 11, 12, 13]
+# numbers_123 = numbers1 * 2 + numbers2 * 9 + numbers3
+# print(numbers_123)
+
+# numbers = [2, 6, 3, 14, 10, 4, 11, 16, 12, 5, 4, 16, 1, 0, 8, 16, 10, 10, 8, 5, 1, 11, 10, 10, 12, 0, 0, 6, 14, 8, 2, 12, 14, 5, 6, 12, 1, 2, 10, 14, 9, 1, 15, 1, 2, 14, 16, 6, 7, 5]
+# print(len(numbers))
+# print(numbers[len(numbers)-1])
+# print(numbers[::-1])
+# if '5' in numbers and '17' in numbers:
+#     print('YES')
+# else:
+#     print('NO')
+# print(numbers[1:len(numbers)-1])
+
+# n = int(input())
+# languages = []
+# for _ in range(n):
+#     languages.append(input())
+# print(languages)
+
+# alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# long_blyat = []
+# for i in range(len(alpha)):
+#     long_blyat.append(alpha[i]*(i+1))
+# print(long_blyat)
+
+# n = int(input())
+# n_powered = []
+# for _ in range(n):
+#     n_powered.append(int(input())**3)
+# print(n_powered)
+
+# n = int(input())
+# div = []
+# for i in range(1, n+1):
+#     if n % i == 0:
+#         div.append(i)
+# print(div)
+
+# n = int(input())
+# n_list = []
+# for i in range(n):
+#         n_list.append(int(input()))
+# neigh_sum = []
+# for i in range(len(n_list)-1):
+#         neigh_sum.append(n_list[i]+n_list[i+1])
+# print(neigh_sum)
+
+# n = int(input())
+# n_list = []
+# for i in range(n):
+#         n_list.append(int(input()))
+# del n_list[1::2]
+# print(n_list)
+
+# n = int(input())
+# s_list = []
+# end_text = ''
+# for _ in range(n):
+#     s_list.append(input())
+# k = int(input())
+# for s in s_list:
+#     if len(s) >= k:
+#         s = s[k-1]
+#         end_text += s
+# print(end_text)
+
+# n = int(input())
+# s_list = []
+# for _ in range(n):
+#     s_list.extend(input())
+# print(s_list)
+
+# numbers = [1, 2, 3, 4]
+# numbers_square = []
+# for i in range(len(numbers)):
+#     numbers_square.append(numbers[i]**2)
+# print(numbers_square)
+
+# n = int(input())
+# s = []
+# s_sq = []
+# for _ in range(n):
+#     s.append(int(input()))
+# print(*s, sep='\n')
+# print()
+# for i in range(len(s)):
+#     s_sq.append(s[i]**2 + s[i]*2 + 1)
+# print(*s_sq, sep='\n')
+
+# n = int(input())
+# n_nums = []
+# n_cleared = []
+# for _ in range(n):
+#     n_nums.append(int(input()))
+# maxi = max(n_nums)
+# mini = min(n_nums)
+# for num in n_nums:
+#     if num != maxi and num != mini:
+#         n_cleared.append(num)
+# print(*n_cleared, sep='\n')
+
+# n = int(input())
+# s_n = []
+# for _ in range(n):
+#     s = input()
+#     if s not in s_n:
+#         s_n.append(s)
+# print(*s_n, sep='\n')
+
+
+# n_list = [input() for elem in range(int(input()))]
+# k_list = [input() for elem in range(int(input()))]
+# c_q = 0
+# for elem in n_list:
+#     for query in k_list:
+#         if query.lower() in elem.lower():
+#             c_q += 1
+#     if c_q == len(k_list):
+#         print(elem)
+#     c_q = 0
+
+# n = int(input())
+# negatives = []
+# zeros = []
+# positives = []
+# for _ in range(n):
+#     x = int(input())
+#     if x < 0:
+#         negatives.append(x)
+#     elif x == 0:
+#         zeros.append(x)
+#     elif x > 0:
+#         positives.append(x)
+# print(*negatives, *zeros, *positives, sep='\n')
+
+
+# На вход программе подается строка текста, содержащая имя, отчество и фамилию человека.
+# Напишите программу, которая выводит инициалы человека.
+
+# s = input().split()
+# first_l = []
+# for element in s:
+#     letter = element[0]
+#     first_l.append(letter)
+# print('.'.join(first_l), '.', sep = '')
+
+# На вход программе подается одна строка с корректным именем файла
+# в операционной системе Windows. Напишите программу, которая разбирает строку на части,
+# разделенные символом "\". Каждую часть вывести в отдельной строке.
+# s = input().split('\\')
+# print(*s, sep='\n')
+
+# На вход программе подается строка текста, содержащая целые числа.
+# Напишите программу, которая по заданным числам строит столбчатую диаграмму.
+# Формат входных данных
+# На вход программе подается строка текста, содержащая целые числа,
+# разделенных символом пробела.
+
+# s = input().split(' ')
+# for elem in s:
+#     elem = int(elem)
+#     print('+' * elem)
+
+# Напишите программу, которая определяет, является ли введенная строка текста
+# корректным ip-адресом. ip-адрес является корректным, если все 4 числа находятся
+# в диапазоне от 0 до 255 включительно.
+# flag = True
+# s = input().split('.')
+# for elem in s:
+#     elem = int(elem)
+#     if elem < 0 or elem > 255:
+#         flag = False
+#         break
+# if flag:
+#     print('ДА')
+# else:
+#     print('НЕТ')
+
+# На вход программе подается строка текста и строка-разделитель. Напишите программу,
+# которая вставляет указанный разделитель между каждым символом введенной строки текста.
+
+# s = input()
+# sep_by = input()
+# s_sepd = []
+# for char in s:
+#     s_sepd.append(char)
+# print(sep_by.join(s_sepd))
+
+# На вход программе подается строка текста, содержащая целые числа.
+# Из данной строки формируется список чисел. Напишите программу, которая подсчитывает,
+# сколько в полученном списке пар элементов, равных друг другу.
+# Считается, что любые два элемента, равные друг другу образуют одну пару,
+# которую необходимо посчитать.
+
+
